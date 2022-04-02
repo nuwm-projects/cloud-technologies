@@ -20,22 +20,30 @@ sudo virt-customize -a focal-server-cloudimg-amd64.img --install qemu-guest-agen
 
 Далі створено віртуальну машину на основі модифікованого образу та створено темплейт для створення віртуальних машин в
 Proxmox.
+
 ![hardware-config.png](img/hardware-config.png)
+
 ![cloud-init.png](img/cloud-init.png)
 
 ## Ствлрення віртуальної машини
 
 З отриманого шаблону було створено віртуальну машину. Де було змінено hardware конфігурації та в cloud init, змінивши
 характеристики машини та додано ssh ключ.
+
 ![configured-cloud-init.png](img/configured-cloud-init.png)
+
 ![configured-hardware.png](img/configured-hardware.png)
 
 Далі віртуальну запустивши віртуальну машину вона отримала ssh ключ та інші налаштування.
+
 ![summary.png](img/summary.png)
 
 ## Налаштування та встановлення додаткового софта.
+
 Пдіʼєднавшись до віртуалкі по ssh, створимо юзера та додавання його в групу sudo
+
 ![user-creation.png](img/user-creation.png)
+
 ![add-user1-ti-sudo.png](img/add-user1-ti-sudo.png)
 
 Далі оновлено систему та додамо ssh ключ для нового користувача (в authorized_keys), також згенеруємо ключ ssh ключ для
